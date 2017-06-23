@@ -21,7 +21,6 @@ public class HttpRequestAsynTask extends AsyncTask<String, Void, String> {
 
     private final HttpClient httpClient = new DefaultHttpClient();
     private String content = null;
-    private ProgressDialog progressDialog = null;
     private Context context;
     private AsyncTaskCompleteListener<String> callback;
 
@@ -29,14 +28,11 @@ public class HttpRequestAsynTask extends AsyncTask<String, Void, String> {
     {
         this.context = context;
         this.callback = callback;
-        progressDialog = new ProgressDialog(this.context);
     }
 
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        progressDialog.setMessage("Please Wait ...");
-        progressDialog.show();
     }
 
     @Override
@@ -68,8 +64,8 @@ public class HttpRequestAsynTask extends AsyncTask<String, Void, String> {
 
     protected void onPostExecute(String result)
     {
-        progressDialog.dismiss();
         System.out.println("on Post execute called");
+        callback.onTaskComplete(result);
     }
 }
 

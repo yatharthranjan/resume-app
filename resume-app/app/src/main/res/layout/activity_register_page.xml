@@ -16,12 +16,12 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="centerInside"
-        android:src="@drawable/my_logo"
-        android:layout_gravity="center_horizontal" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/my_logo"
+            android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
 
@@ -55,14 +55,14 @@
         app:met_floatingLabel="highlight"
         app:met_accentTypeface="fonts/Roboto-Light.ttf"
         app:met_typeface="fonts/Roboto-Regular.ttf"
-        android:inputType="textPassword"
         android:hint="Password"
+        android:inputType="textPassword"
         app:met_iconLeft="@drawable/ic_action_name"
         app:met_clearButton="true"/>
 
 
     <com.dd.CircularProgressButton
-        android:id="@+id/btnSignIn"
+        android:id="@+id/btnSignUp"
         android:layout_marginRight="80dp"
         android:layout_marginLeft="80dp"
         android:paddingLeft="40dp"
@@ -82,7 +82,6 @@
         app:cpb_textComplete="SUCCESS"
         app:cpb_textError="ERROR"
         app:cpb_textIdle="SIGN IN" />
-
 
 
 </LinearLayout>
