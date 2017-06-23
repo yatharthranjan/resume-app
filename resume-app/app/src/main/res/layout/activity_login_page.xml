@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kings.yatharth.yatharthresume.view.LoginPage"
+    android:background="@drawable/greywallpaper">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:src="@drawable/my_logo"
+        android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:met_primaryColor="@color/colorPrimary"
+        android:id="@+id/username"
+        app:met_minCharacters="5"
+        app:met_maxCharacters="30"
+        app:met_floatingLabel="highlight"
+        app:met_accentTypeface="fonts/Roboto-Light.ttf"
+        app:met_typeface="fonts/Roboto-Regular.ttf"
+        app:met_iconLeft="@drawable/ic_action_username"
+        app:met_clearButton="true"
+        android:hint="Username"/>
+
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        app:met_minCharacters="6"
+        app:met_maxCharacters="15"
+        app:met_floatingLabel="highlight"
+        app:met_accentTypeface="fonts/Roboto-Light.ttf"
+        app:met_typeface="fonts/Roboto-Regular.ttf"
+        android:hint="Password"
+        app:met_iconLeft="@drawable/ic_action_name"
+        app:met_clearButton="true"/>
+
+
+    <com.dd.CircularProgressButton
+        android:id="@+id/btnSignIn"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="80dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="150dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        app:cpb_cornerRadius="7dp"
+        android:textSize="14sp"
+        android:textColor="#fff"
+        app:cpb_selectorIdle="@drawable/idle_state_selector"
+        app:cpb_iconComplete="@drawable/ic_action_success"
+        app:cpb_selectorError="@drawable/error_state"
+        app:cpb_textComplete="SUCCESS"
+        app:cpb_textError="ERROR"
+        app:cpb_textIdle="SIGN IN" />
+
+
+</LinearLayout>
